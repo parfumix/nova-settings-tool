@@ -1,34 +1,28 @@
 <template>
     <div>
-
         <template v-for="(keys, panel) in panels">
-
             <heading class="mb-6">
                 {{ __(panelName(panel)) }}
             </heading>
 
             <card class="relative overflow-hidden mb-8">
-
                 <component
                     v-for="setting in keys"
                     :key="settings[setting].key"
+                    v-show="isAllowed(settings[setting].permission)"
                     :is="`${settings[setting].type}-setting`"
                     :setting="settings[setting]"
                     @update="updateSetting"
                 />
-
             </card>
 
         </template>
 
         <div class="flex items-center">
-
             <progress-button class="ml-auto" @click.native="saveSettings" :processing="saving">
                 {{ __('Save') }}
             </progress-button>
-
         </div>
-
     </div>
 </template>
 
@@ -65,6 +59,14 @@ export default {
     },
 
     methods: {
+        isAllowed(permission) {
+            if(Nova.config.roles.includes('admin')) return true;
+
+            if(! permission) return false;
+
+            return Nova.config.permissions.filter(val => val.name === permission).length
+        },
+
         updateSetting(data) {
             this.settings[data.key].value = data.value
         },
@@ -81,7 +83,6 @@ export default {
                 })
                 .catch(error => {
                     this.saving = false
-                    console.log(error.response)
                 })
         },
 
