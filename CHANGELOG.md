@@ -27,20 +27,20 @@ The top-level `navigation` key in the config file has been renamed to `sidebar-l
 
 ##### Rename config file from `settings.php` to `nova-settings-tool.php`
 
-The package's config file has been renamed to avoid possible conflicts. Fixes [#8](https://github.com/bakerkretzmar/nova-settings-tool/issues/8).
+The package's config file has been renamed to avoid possible conflicts. Fixes [#8](https://github.com/parfumix/nova-settings-tool/issues/8).
 
 ##### Change package namespace from `SettingsTool` to `NovaSettingsTool`
 
 In your `NovaServiceProvider.php`, and anywhere else you're importing the tool, update your imports:
 
 ```diff
-- use Bakerkretzmar\SettingsTool\SettingsTool;
-+ use Bakerkretzmar\NovaSettingsTool\SettingsTool;
+- use parfumix\SettingsTool\SettingsTool;
++ use parfumix\NovaSettingsTool\SettingsTool;
 ```
 
 ##### Remove support for assigning default values to settings
 
-This package doesn't affect the behaviour of your app, it just provide's a nice interface for managing settings in Nova—so setting something like `'default' => 'true'` on a toggle, as was previously possible, _wouldn't actually set a default value for the setting_, it would just change the way the setting was initially _displayed_, which could be misleading. Reverts [a4ad702](https://github.com/bakerkretzmar/nova-settings-tool/commit/a4ad702f29b9229e4d55f5150cb2deba47079932) and closes [#17](https://github.com/bakerkretzmar/nova-settings-tool/issues/17).
+This package doesn't affect the behaviour of your app, it just provide's a nice interface for managing settings in Nova—so setting something like `'default' => 'true'` on a toggle, as was previously possible, _wouldn't actually set a default value for the setting_, it would just change the way the setting was initially _displayed_, which could be misleading. Reverts [a4ad702](https://github.com/parfumix/nova-settings-tool/commit/a4ad702f29b9229e4d55f5150cb2deba47079932) and closes [#17](https://github.com/parfumix/nova-settings-tool/issues/17).
 
 #### Other changes and improvements
 
@@ -62,12 +62,12 @@ This package doesn't affect the behaviour of your app, it just provide's a nice 
 
 ## 0.3.0 – 2019-04-09
 
-- Add `textarea` setting type ([#11](https://github.com/bakerkretzmar/nova-settings-tool/pull/11))
+- Add `textarea` setting type ([#11](https://github.com/parfumix/nova-settings-tool/pull/11))
 - Fix bug translating the "Settings saved!" message
 
 ## 0.2.0 – 2019-03-16
 
-- Allow localization of package's built-in strings and all passed settings ([#9](https://github.com/bakerkretzmar/nova-settings-tool/pull/9))
+- Allow localization of package's built-in strings and all passed settings ([#9](https://github.com/parfumix/nova-settings-tool/pull/9))
 
 ## 0.1.1 – 2019-01-13
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bakerkretzmar\NovaSettingsTool;
+namespace Parfumix\NovaSettingsTool;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;

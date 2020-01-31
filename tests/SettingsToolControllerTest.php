@@ -1,6 +1,6 @@
 <?php
 
-namespace Bakerkretzmar\NovaSettingsTool\Tests;
+namespace Parfumix\NovaSettingsTool\Tests;
 
 use Illuminate\Support\Facades\Storage;
 

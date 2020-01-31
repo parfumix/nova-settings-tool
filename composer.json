@@ -14,7 +14,7 @@
         "settings",
         "tool"
     ],
-    "homepage": "https://github.com/bakerkretzmar/nova-settings-tool",
+    "homepage": "https://github.com/Parfumix/nova-settings-tool",
     "license": "MIT",
     "repositories": [
         {
@@ -33,18 +33,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Bakerkretzmar\\NovaSettingsTool\\": "src/"
+            "Parfumix\\NovaSettingsTool\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bakerkretzmar\\NovaSettingsTool\\Tests\\": "tests/"
+            "Parfumix\\NovaSettingsTool\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bakerkretzmar\\NovaSettingsTool\\SettingsToolServiceProvider"
+                "Parfumix\\NovaSettingsTool\\SettingsToolServiceProvider"
             ]
         }
     },

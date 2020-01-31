@@ -1,8 +1,8 @@
 <?php
 
-namespace Bakerkretzmar\NovaSettingsTool\Http\Middleware;
+namespace Parfumix\NovaSettingsTool\Http\Middleware;
 
-use Bakerkretzmar\NovaSettingsTool\SettingsTool;
+use Parfumix\NovaSettingsTool\SettingsTool;
 
 class Authorize
 {

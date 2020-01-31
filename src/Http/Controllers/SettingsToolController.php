@@ -1,6 +1,6 @@
 <?php
 
-namespace Bakerkretzmar\NovaSettingsTool\Http\Controllers;
+namespace Parfumix\NovaSettingsTool\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Spatie\Valuestore\Valuestore;
